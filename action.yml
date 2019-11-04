@@ -1,0 +1,21 @@
+name: "Yet Another ESLint Action"
+author: "Philipp Kewisch <mozilla@kewis.ch>"
+description: "ESLint with annotations"
+inputs:
+  path:
+    description: "The path to run eslint in"
+    required: false
+    default: "."
+  extensions:
+    description: "A comma separated list of file extensions to lint "
+    required: false
+    default: "js"
+  configFile:
+    description: "A custom .eslintrc, defaults to the normal ESLint files"
+    required: false
+  ignorePath:
+    description: "A custom .eslintignore, defaults to the normal ESLint files"
+    required: false
+runs:
+  using: "node12"
+  main: "src/loader.js"
