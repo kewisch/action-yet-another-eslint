@@ -16,7 +16,7 @@ function convertAnnotations(baseDirectory, results) {
         let data = {
           path: pathName,
           start_line: message.line,
-          end_line: message.endLine,
+          end_line: message.endLine || message.line,
           annotation_level: SEVERITY_MAP[message.severity],
           message: message.message,
           title: message.ruleId,
